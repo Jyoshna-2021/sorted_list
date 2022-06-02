@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/editText1"
             android:layout_centerHorizontal="true"
-            android:text="ADD Values to listview" />
+            android:text="ADD Values" />
 
         <EditText
             android:id="@+id/editText1"
@@ -28,7 +28,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="26dp"
             android:ems="10"
-            android:hint="Add elements listView" />
+            android:hint="Add elements to the list" />
 
 
         <androidx.recyclerview.widget.RecyclerView

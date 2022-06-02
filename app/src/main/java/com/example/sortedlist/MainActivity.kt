@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity() {
     var mAdapter: RecyclerViewAdapter? = null
     var Addbutton: Button? = null
     var GetValue: EditText? = null
-    var ListElements = arrayOf("apple","ball","cat","database","hen","ice",
-        "java","jack","json","lemon")
+    var ListElements = arrayOf("apple","android","ball","c","c++","cat","database","hen","ice",
+        "java","jack","json","lemon",)
     var coordinatorLayout: CoordinatorLayout? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
