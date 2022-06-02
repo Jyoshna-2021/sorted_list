@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         recyclerView!!.adapter = mAdapter
         Addbutton!!.setOnClickListener {
             ListElementsArrayList.add(GetValue!!.text.toString())
-            ListElementsArrayList.sort()
+            ListElementsArrayList.sortBy { it.toUpperCase() }
             mAdapter!!.notifyDataSetChanged()
         }
     }
