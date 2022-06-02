@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     var Addbutton: Button? = null
     var GetValue: EditText? = null
     var ListElements = arrayOf("apple","android","ball","c","c++","cat","database","hen","ice",
-        "java","jack","json","lemon",)
+        "java","jack","json","lemon")
     var coordinatorLayout: CoordinatorLayout? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,14 +44,14 @@ class MainActivity : AppCompatActivity() {
         itemTouchhelper.attachToRecyclerView(recyclerView)
 
         val ListElementsArrayList: MutableList<String> = ArrayList(Arrays.asList(*ListElements))
-
         Addbutton = findViewById<View>(R.id.button1) as Button
         GetValue = findViewById<View>(R.id.editText1) as EditText
         mAdapter = RecyclerViewAdapter(ListElementsArrayList as ArrayList<String>)
         recyclerView!!.adapter = mAdapter
         Addbutton!!.setOnClickListener {
             ListElementsArrayList.add(GetValue!!.text.toString())
-            ListElementsArrayList.sort()
+
+            ListElementsArrayList.sortBy { it.toUpperCase() }
             mAdapter!!.notifyDataSetChanged()
         }
     }
