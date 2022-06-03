@@ -1,8 +1,9 @@
 package com.example.sortedlist
 
-import android.annotation.SuppressLint
+
 import android.os.Bundle
 import android.view.View
+
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
@@ -10,19 +11,18 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
-
 import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
     private var recyclerView: RecyclerView? = null
-    var mAdapter: RecyclerViewAdapter? = null
+     var mAdapter: RecyclerViewAdapter? = null
     private var addbutton: Button? = null
     private var getValue: EditText? = null
     private var listElements = arrayOf("apple","android","ball","c","c++","cat","database","hen","ice",
         "java","jack","json","lemon")
     var coordinatorLayout: CoordinatorLayout? = null
 
-    @SuppressLint("NotifyDataSetChanged")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         addbutton!!.setOnClickListener {
             listElementsArrayList.add(getValue!!.text.toString())
             listElementsArrayList.sortBy { it.uppercase() }
-            mAdapter!!.notifyDataSetChanged()
+            mAdapter!!.refreshList()
         }
     }
 }

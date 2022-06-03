@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Tringapps/AndroidStudioProjects/sortedlist/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.1" />
+        <entry key="..\:/Users/Tringapps/AndroidStudioProjects/sortedlist/app/src/main/res/drawable/ic_delete.xml" value="0.1" />
         <entry key="..\:/Users/Tringapps/AndroidStudioProjects/sortedlist/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Tringapps/AndroidStudioProjects/sortedlist/app/src/main/res/layout/layout_list.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Tringapps/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.12037037037037036" />

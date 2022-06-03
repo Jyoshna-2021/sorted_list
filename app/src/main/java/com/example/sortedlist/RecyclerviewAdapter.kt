@@ -3,19 +3,14 @@ package com.example.sortedlist
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class RecyclerViewAdapter(val data: ArrayList<String>) :
-    RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
+class RecyclerViewAdapter(private val data: MutableList<String>) : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val mTitle: TextView
-        init {
-            mTitle = itemView.findViewById(R.id.txtTitle)
-        }
+        val mTitle: TextView = itemView.findViewById(R.id.txtTitle)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -36,6 +31,10 @@ class RecyclerViewAdapter(val data: ArrayList<String>) :
         data.removeAt(position)
         notifyItemRemoved(position)
     }
+    fun refreshList() {
+        notifyDataSetChanged()
+    }
+
 
 }
 
