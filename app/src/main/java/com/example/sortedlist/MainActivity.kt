@@ -1,4 +1,4 @@
-package com.example.sortedposition
+package com.example.sortedlist
 
 import android.os.Bundle
 import android.widget.EditText
