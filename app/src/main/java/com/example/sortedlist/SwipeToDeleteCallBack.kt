@@ -1,5 +1,7 @@
 package com.example.sortedlist
 
+
+import android.R
 import android.content.Context
 import android.graphics.*
 import android.graphics.drawable.ColorDrawable
@@ -9,11 +11,11 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 
 
-abstract class SwipeToDeleteCallback internal constructor(mContext: Context) :
+abstract class SwipeToDeleteCallback internal constructor(var mContext: Context) :
     ItemTouchHelper.Callback() {
-    private val mClearPaint: Paint = Paint()
-    private val mBackground: ColorDrawable = ColorDrawable()
-    private val backgroundColor: Int = Color.parseColor("#b80f0a")
+    private val mClearPaint: Paint
+    private val mBackground: ColorDrawable
+    private val backgroundColor: Int
     private val deleteDrawable: Drawable?
     private val intrinsicWidth: Int
     private val intrinsicHeight: Int
@@ -80,6 +82,9 @@ abstract class SwipeToDeleteCallback internal constructor(mContext: Context) :
     }
 
     init {
+        mBackground = ColorDrawable()
+        backgroundColor = Color.parseColor("#b80f0a")
+        mClearPaint = Paint()
         mClearPaint.xfermode = PorterDuffXfermode(PorterDuff.Mode.CLEAR)
         deleteDrawable = ContextCompat.getDrawable(mContext, R.drawable.ic_delete)
         intrinsicWidth = deleteDrawable!!.intrinsicWidth
