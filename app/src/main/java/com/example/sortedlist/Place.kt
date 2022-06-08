@@ -1,4 +1,5 @@
-package com.example.sortedposition
+package com.example.sortedlist
+
 
 data class Place(
     val placeName: String
