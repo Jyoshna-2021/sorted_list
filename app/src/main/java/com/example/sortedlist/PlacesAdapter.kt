@@ -38,7 +38,6 @@ class PlacesAdapter :
     inner class PlacesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val tvPlaceName: TextView = itemView.findViewById(R.id.tvPlaceName)
         fun bind(place: Place) {
-            //check for null
             tvPlaceName.text = place.placeName
         }
     }
