@@ -20,12 +20,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         initRecyclerView()
-
         getValue = findViewById(R.id.edit_text)
         fabAddItem = findViewById(R.id.fabAddItem)
-
         fabAddItem.setOnClickListener {
             val names = getValue.text.toString()
             val list = ArrayList<Place>(placesList)
