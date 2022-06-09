@@ -13,15 +13,14 @@
 
         <TextView
             android:id="@+id/tvPlaceName"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:textSize="20sp"
-            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:gravity="center_vertical"
             android:paddingStart="16dp"
             android:paddingEnd="8dp"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
