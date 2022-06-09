@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/edit_text"
             android:layout_centerHorizontal="true"
-            android:text="ADD Values" />
+            android:text="@string/add_values" />
 
         <EditText
             android:id="@+id/edit_text"
@@ -28,7 +28,9 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="26dp"
             android:ems="10"
-            android:hint="Add elements to the list" />
+            android:hint="@string/add_elements_to_the_list"
+            android:importantForAutofill="no"
+            android:inputType="text" />
 
 
         <androidx.recyclerview.widget.RecyclerView
